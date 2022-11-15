@@ -71,5 +71,53 @@
     <a name="circuit" val="Fetch"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(250,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="I"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp lib="0" loc="(580,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="iCode"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(580,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="iFun"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(580,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="rA"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(580,240)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="rB"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(580,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="valC"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(580,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="valP"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
   </circuit>
 </project>
