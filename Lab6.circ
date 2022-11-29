@@ -953,4 +953,241 @@ f2 e2 45 83 60 12 20 71
     <wire from="(540,360)" to="(540,890)"/>
     <wire from="(540,360)" to="(560,360)"/>
   </circuit>
+  <circuit name="Decode">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Decode"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(110,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="iCode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(110,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rA"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(110,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rB"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(110,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(750,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="valA"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp lib="0" loc="(750,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="valB"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp loc="(440,230)" name="dstE"/>
+    <comp loc="(440,300)" name="dstM"/>
+    <comp loc="(440,370)" name="srcA"/>
+    <comp loc="(440,440)" name="srcB"/>
+    <comp loc="(720,230)" name="Register_File"/>
+    <wire from="(110,230)" to="(170,230)"/>
+    <wire from="(110,270)" to="(160,270)"/>
+    <wire from="(110,310)" to="(150,310)"/>
+    <wire from="(110,350)" to="(130,350)"/>
+    <wire from="(130,350)" to="(130,520)"/>
+    <wire from="(130,520)" to="(500,520)"/>
+    <wire from="(150,250)" to="(150,310)"/>
+    <wire from="(150,250)" to="(220,250)"/>
+    <wire from="(150,310)" to="(150,460)"/>
+    <wire from="(150,460)" to="(220,460)"/>
+    <wire from="(160,270)" to="(160,320)"/>
+    <wire from="(160,320)" to="(160,390)"/>
+    <wire from="(160,320)" to="(220,320)"/>
+    <wire from="(160,390)" to="(220,390)"/>
+    <wire from="(170,230)" to="(170,300)"/>
+    <wire from="(170,230)" to="(220,230)"/>
+    <wire from="(170,300)" to="(170,370)"/>
+    <wire from="(170,300)" to="(220,300)"/>
+    <wire from="(170,370)" to="(170,440)"/>
+    <wire from="(170,370)" to="(220,370)"/>
+    <wire from="(170,440)" to="(220,440)"/>
+    <wire from="(440,230)" to="(500,230)"/>
+    <wire from="(440,250)" to="(440,300)"/>
+    <wire from="(440,250)" to="(500,250)"/>
+    <wire from="(440,370)" to="(450,370)"/>
+    <wire from="(440,440)" to="(460,440)"/>
+    <wire from="(450,270)" to="(450,370)"/>
+    <wire from="(450,270)" to="(500,270)"/>
+    <wire from="(460,290)" to="(460,440)"/>
+    <wire from="(460,290)" to="(500,290)"/>
+    <wire from="(480,310)" to="(480,610)"/>
+    <wire from="(480,310)" to="(500,310)"/>
+    <wire from="(490,330)" to="(490,610)"/>
+    <wire from="(490,330)" to="(500,330)"/>
+    <wire from="(500,350)" to="(500,520)"/>
+    <wire from="(720,230)" to="(750,230)"/>
+    <wire from="(720,250)" to="(750,250)"/>
+  </circuit>
+  <circuit name="Register_File">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Register_File"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(210,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="dstE"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(210,200)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="dstM"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(210,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="srcA"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(210,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="srcB"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(210,320)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="valE"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp lib="0" loc="(210,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="valM"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp lib="0" loc="(210,400)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(620,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="valA"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+    <comp lib="0" loc="(620,190)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="valB"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="64"/>
+    </comp>
+  </circuit>
+  <circuit name="dstE">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="dstE"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(230,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="iCode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(230,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rB"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(390,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+  </circuit>
+  <circuit name="dstM">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="dstM"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(230,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="iCode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(230,270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rA"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(390,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+  </circuit>
+  <circuit name="srcA">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="srcA"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(230,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="iCode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(230,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rA"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(390,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+  </circuit>
+  <circuit name="srcB">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="srcB"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="2048000.0"/>
+    <comp lib="0" loc="(230,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="iCode"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(230,260)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rB"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(390,230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="4"/>
+    </comp>
+  </circuit>
 </project>
