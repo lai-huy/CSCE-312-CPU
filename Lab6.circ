@@ -28,7 +28,6 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#..\CSCE312\Lab6\MemoryBootleg.circ" name="12"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -1480,7 +1479,6 @@ f2 e2 45 83 60 12 20 71
     <comp lib="1" loc="(970,170)" name="Controlled Buffer">
       <a name="width" val="64"/>
     </comp>
-    <comp lib="12" loc="(380,150)" name="MemoryDecoder"/>
     <comp lib="2" loc="(340,510)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
@@ -1490,6 +1488,7 @@ f2 e2 45 83 60 12 20 71
     <comp lib="4" loc="(860,370)" name="RAM">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
+    <comp loc="(380,150)" name="memHelper"/>
     <wire from="(110,620)" to="(270,620)"/>
     <wire from="(1100,460)" to="(1110,460)"/>
     <wire from="(140,150)" to="(160,150)"/>
