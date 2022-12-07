@@ -75,17 +75,14 @@
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(70,70)" name="Clock"/>
-    <comp loc="(1110,70)" name="theExecute"/>
+    <comp loc="(1150,70)" name="theExecute"/>
     <comp loc="(1530,50)" name="Memory"/>
     <comp loc="(1860,50)" name="WriteBack"/>
     <comp loc="(2160,50)" name="PCUpdate"/>
     <comp loc="(490,50)" name="Fetch"/>
     <comp loc="(850,50)" name="Decode"/>
-    <wire from="(1110,70)" to="(1160,70)"/>
-    <wire from="(1110,80)" to="(1150,80)"/>
-    <wire from="(1110,90)" to="(1150,90)"/>
     <wire from="(1150,200)" to="(1920,200)"/>
-    <wire from="(1150,80)" to="(1150,90)"/>
+    <wire from="(1150,70)" to="(1160,70)"/>
     <wire from="(1150,90)" to="(1150,200)"/>
     <wire from="(1160,190)" to="(1910,190)"/>
     <wire from="(1160,70)" to="(1160,190)"/>
@@ -126,29 +123,54 @@
     <wire from="(260,70)" to="(260,240)"/>
     <wire from="(260,70)" to="(270,70)"/>
     <wire from="(490,110)" to="(560,110)"/>
-    <wire from="(490,130)" to="(520,130)"/>
+    <wire from="(490,130)" to="(590,130)"/>
     <wire from="(490,150)" to="(550,150)"/>
     <wire from="(490,170)" to="(520,170)"/>
     <wire from="(490,50)" to="(620,50)"/>
     <wire from="(490,70)" to="(520,70)"/>
     <wire from="(490,90)" to="(570,90)"/>
+    <wire from="(520,20)" to="(520,70)"/>
+    <wire from="(520,20)" to="(910,20)"/>
     <wire from="(550,150)" to="(550,230)"/>
     <wire from="(550,230)" to="(1290,230)"/>
     <wire from="(560,110)" to="(560,350)"/>
+    <wire from="(560,110)" to="(590,110)"/>
     <wire from="(560,350)" to="(1620,350)"/>
     <wire from="(570,340)" to="(1610,340)"/>
+    <wire from="(570,70)" to="(570,90)"/>
+    <wire from="(570,70)" to="(630,70)"/>
     <wire from="(570,90)" to="(570,340)"/>
     <wire from="(580,150)" to="(580,410)"/>
     <wire from="(580,150)" to="(630,150)"/>
     <wire from="(580,410)" to="(1570,410)"/>
+    <wire from="(590,130)" to="(590,250)"/>
+    <wire from="(590,250)" to="(870,250)"/>
+    <wire from="(590,90)" to="(590,110)"/>
+    <wire from="(590,90)" to="(630,90)"/>
     <wire from="(620,110)" to="(620,240)"/>
     <wire from="(620,110)" to="(630,110)"/>
-    <wire from="(620,240)" to="(1300,240)"/>
-    <wire from="(620,30)" to="(1300,30)"/>
+    <wire from="(620,240)" to="(880,240)"/>
     <wire from="(620,30)" to="(620,50)"/>
+    <wire from="(620,30)" to="(920,30)"/>
     <wire from="(620,50)" to="(630,50)"/>
     <wire from="(70,70)" to="(260,70)"/>
-    <wire from="(850,50)" to="(1290,50)"/>
+    <wire from="(850,50)" to="(900,50)"/>
+    <wire from="(850,70)" to="(890,70)"/>
+    <wire from="(870,150)" to="(870,250)"/>
+    <wire from="(870,150)" to="(930,150)"/>
+    <wire from="(880,170)" to="(880,240)"/>
+    <wire from="(880,170)" to="(930,170)"/>
+    <wire from="(880,240)" to="(1300,240)"/>
+    <wire from="(890,130)" to="(930,130)"/>
+    <wire from="(890,70)" to="(890,130)"/>
+    <wire from="(900,110)" to="(930,110)"/>
+    <wire from="(900,50)" to="(1290,50)"/>
+    <wire from="(900,50)" to="(900,110)"/>
+    <wire from="(910,20)" to="(910,90)"/>
+    <wire from="(910,90)" to="(930,90)"/>
+    <wire from="(920,30)" to="(1300,30)"/>
+    <wire from="(920,30)" to="(920,70)"/>
+    <wire from="(920,70)" to="(930,70)"/>
   </circuit>
   <circuit name="Decode">
     <a name="appearance" val="logisim_evolution"/>
