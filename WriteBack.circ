@@ -4,13 +4,10 @@
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
-      <a name="facing" val="west"/>
+      <a name="facing" val="north"/>
     </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
-    </tool>
-    <tool name="Constant">
-      <a name="facing" val="west"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
@@ -62,49 +59,67 @@
     <a name="circuit" val="WriteBack"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="2048000.0"/>
-    <comp lib="0" loc="(250,120)" name="Pin">
+    <comp lib="0" loc="(160,130)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="iCode"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(250,170)" name="Pin">
+    <comp lib="0" loc="(160,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rA"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(250,210)" name="Pin">
+    <comp lib="0" loc="(160,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="rB"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(800,580)" name="Pin">
+    <comp lib="0" loc="(250,270)" name="Constant">
+      <a name="value" val="0x4"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(800,160)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="dstE"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(800,650)" name="Pin">
+    <comp lib="0" loc="(800,270)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="dstM"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="2" loc="(580,580)" name="Multiplexer">
+    <comp lib="2" loc="(310,270)" name="Multiplexer">
+      <a name="select" val="4"/>
       <a name="selloc" val="tr"/>
       <a name="width" val="4"/>
     </comp>
-    <comp loc="(530,120)" name="WBDecoder"/>
-    <wire from="(250,120)" to="(310,120)"/>
-    <wire from="(250,170)" to="(260,170)"/>
-    <wire from="(250,210)" to="(250,590)"/>
-    <wire from="(250,590)" to="(550,590)"/>
-    <wire from="(260,170)" to="(260,570)"/>
-    <wire from="(260,570)" to="(550,570)"/>
-    <wire from="(530,160)" to="(560,160)"/>
-    <wire from="(560,160)" to="(560,560)"/>
-    <wire from="(580,580)" to="(800,580)"/>
+    <wire from="(160,130)" to="(290,130)"/>
+    <wire from="(160,170)" to="(190,170)"/>
+    <wire from="(160,210)" to="(180,210)"/>
+    <wire from="(180,210)" to="(180,220)"/>
+    <wire from="(180,210)" to="(270,210)"/>
+    <wire from="(180,220)" to="(180,250)"/>
+    <wire from="(180,220)" to="(270,220)"/>
+    <wire from="(180,250)" to="(270,250)"/>
+    <wire from="(190,170)" to="(190,240)"/>
+    <wire from="(190,240)" to="(270,240)"/>
+    <wire from="(250,270)" to="(260,270)"/>
+    <wire from="(260,270)" to="(260,280)"/>
+    <wire from="(260,270)" to="(270,270)"/>
+    <wire from="(260,280)" to="(260,290)"/>
+    <wire from="(260,280)" to="(270,280)"/>
+    <wire from="(260,290)" to="(260,300)"/>
+    <wire from="(260,290)" to="(270,290)"/>
+    <wire from="(260,300)" to="(270,300)"/>
+    <wire from="(290,130)" to="(290,190)"/>
+    <wire from="(310,270)" to="(750,270)"/>
+    <wire from="(750,160)" to="(750,270)"/>
+    <wire from="(750,160)" to="(800,160)"/>
+    <wire from="(750,270)" to="(800,270)"/>
   </circuit>
   <circuit name="WBDecoder">
     <a name="appearance" val="logisim_evolution"/>
