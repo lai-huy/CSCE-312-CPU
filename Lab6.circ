@@ -113,6 +113,7 @@
     <wire from="(1370,80)" to="(1380,80)"/>
     <wire from="(1380,210)" to="(2080,210)"/>
     <wire from="(1380,80)" to="(1380,210)"/>
+    <wire from="(1390,200)" to="(1390,400)"/>
     <wire from="(1390,200)" to="(2070,200)"/>
     <wire from="(1390,60)" to="(1390,80)"/>
     <wire from="(1390,80)" to="(1390,200)"/>
@@ -142,8 +143,6 @@
     <wire from="(180,70)" to="(180,290)"/>
     <wire from="(180,70)" to="(190,70)"/>
     <wire from="(1800,100)" to="(1800,270)"/>
-    <wire from="(1930,380)" to="(2020,380)"/>
-    <wire from="(1930,390)" to="(2030,390)"/>
     <wire from="(200,320)" to="(2170,320)"/>
     <wire from="(200,80)" to="(200,320)"/>
     <wire from="(200,80)" to="(260,80)"/>
@@ -184,6 +183,12 @@
     <wire from="(720,300)" to="(2100,300)"/>
     <wire from="(720,60)" to="(850,60)"/>
     <wire from="(720,80)" to="(790,80)"/>
+    <wire from="(730,180)" to="(730,380)"/>
+    <wire from="(730,180)" to="(870,180)"/>
+    <wire from="(730,380)" to="(2020,380)"/>
+    <wire from="(740,200)" to="(740,390)"/>
+    <wire from="(740,200)" to="(870,200)"/>
+    <wire from="(740,390)" to="(2030,390)"/>
     <wire from="(790,30)" to="(1140,30)"/>
     <wire from="(790,30)" to="(790,80)"/>
     <wire from="(80,250)" to="(260,250)"/>
@@ -209,9 +214,9 @@
     <wire from="(850,40)" to="(1150,40)"/>
     <wire from="(850,40)" to="(850,60)"/>
     <wire from="(850,60)" to="(870,60)"/>
-    <wire from="(860,160)" to="(860,200)"/>
+    <wire from="(860,160)" to="(860,400)"/>
     <wire from="(860,160)" to="(870,160)"/>
-    <wire from="(860,200)" to="(1390,200)"/>
+    <wire from="(860,400)" to="(1390,400)"/>
   </circuit>
   <circuit name="Fetch">
     <a name="appearance" val="logisim_evolution"/>
@@ -638,6 +643,16 @@
       <a name="label" val="rB"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(130,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="dstMIn"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(130,490)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="dstEIn"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(220,390)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="valM"/>
@@ -676,8 +691,14 @@
     <wire from="(130,220)" to="(300,220)"/>
     <wire from="(130,270)" to="(290,270)"/>
     <wire from="(130,310)" to="(280,310)"/>
+    <wire from="(130,460)" to="(220,460)"/>
+    <wire from="(130,490)" to="(210,490)"/>
+    <wire from="(210,490)" to="(210,580)"/>
+    <wire from="(210,580)" to="(570,580)"/>
     <wire from="(220,390)" to="(250,390)"/>
     <wire from="(220,420)" to="(240,420)"/>
+    <wire from="(220,460)" to="(220,570)"/>
+    <wire from="(220,570)" to="(550,570)"/>
     <wire from="(240,420)" to="(240,500)"/>
     <wire from="(240,500)" to="(590,500)"/>
     <wire from="(250,390)" to="(250,490)"/>
@@ -700,15 +721,16 @@
     <wire from="(300,430)" to="(300,530)"/>
     <wire from="(300,430)" to="(310,430)"/>
     <wire from="(300,530)" to="(310,530)"/>
-    <wire from="(530,220)" to="(530,270)"/>
-    <wire from="(530,270)" to="(610,270)"/>
-    <wire from="(530,290)" to="(610,290)"/>
     <wire from="(530,330)" to="(530,360)"/>
     <wire from="(530,330)" to="(610,330)"/>
     <wire from="(530,430)" to="(540,430)"/>
     <wire from="(530,530)" to="(600,530)"/>
     <wire from="(540,350)" to="(540,430)"/>
     <wire from="(540,350)" to="(610,350)"/>
+    <wire from="(550,270)" to="(550,570)"/>
+    <wire from="(550,270)" to="(610,270)"/>
+    <wire from="(570,290)" to="(570,580)"/>
+    <wire from="(570,290)" to="(610,290)"/>
     <wire from="(580,230)" to="(580,490)"/>
     <wire from="(580,230)" to="(610,230)"/>
     <wire from="(590,250)" to="(590,500)"/>
