@@ -1,0 +1,28 @@
+.pos 0
+init: 
+    irmovq $0, %rbp
+    irmovq $0, %rsp
+    call run
+    halt
+
+    .align 4
+array:
+    .long 0xd
+    .long 0xc0
+    .long 0xb00
+    .long 0xa000
+    
+
+run:
+    pushq %rax
+    rrmovq %rsp, %rax
+    irmovq $7, %rsp
+    rmmovq %rsp, 4(%rbp)
+    pushq %rsp
+    irmovq array, %rdx
+    pushq %rdx
+    mrmovq 4(%rbp), %rcx   
+    mrmovq 8(%rbp), %rdx         
+    rrmovq %rbp, %rax
+    popq %rbp
+    ret 

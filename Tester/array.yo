@@ -1,0 +1,28 @@
+0x000:                      | .pos 0
+0x000:                      | init: 
+0x000: 30f50000000000000000 |     irmovq $0, %rbp
+0x00a: 30f40000000000000000 |     irmovq $0, %rsp
+0x014: 803000000000000000   |     call run
+0x01d: 00                   |     halt
+                            | 
+0x020:                      |     .align 4
+0x020:                      | array:
+0x020: 0d000000             |     .long 0xd
+0x024: c0000000             |     .long 0xc0
+0x028: 000b0000             |     .long 0xb00
+0x02c: 00a00000             |     .long 0xa000
+                            |     
+                            | 
+0x030:                      | run:
+0x030: a00f                 |     pushq %rax
+0x032: 2040                 |     rrmovq %rsp, %rax
+0x034: 30f40700000000000000 |     irmovq $7, %rsp
+0x03e: 40450400000000000000 |     rmmovq %rsp, 4(%rbp)
+0x048: a04f                 |     pushq %rsp
+0x04a: 30f22000000000000000 |     irmovq array, %rdx
+0x054: a02f                 |     pushq %rdx
+0x056: 50150400000000000000 |     mrmovq 4(%rbp), %rcx   
+0x060: 50250800000000000000 |     mrmovq 8(%rbp), %rdx         
+0x06a: 2050                 |     rrmovq %rbp, %rax
+0x06c: b05f                 |     popq %rbp
+0x06e: 90                   |     ret 
