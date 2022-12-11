@@ -1341,8 +1341,12 @@
       <a name="label" val="rB"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(250,270)" name="Constant">
+    <comp lib="0" loc="(240,270)" name="Constant">
       <a name="value" val="0x4"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(240,340)" name="Constant">
+      <a name="value" val="0xf"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(330,240)" name="Pin">
@@ -1374,7 +1378,23 @@
     <wire from="(180,250)" to="(270,250)"/>
     <wire from="(190,170)" to="(190,240)"/>
     <wire from="(190,240)" to="(270,240)"/>
-    <wire from="(250,270)" to="(260,270)"/>
+    <wire from="(240,270)" to="(260,270)"/>
+    <wire from="(240,340)" to="(250,340)"/>
+    <wire from="(250,190)" to="(250,200)"/>
+    <wire from="(250,190)" to="(270,190)"/>
+    <wire from="(250,200)" to="(250,230)"/>
+    <wire from="(250,200)" to="(270,200)"/>
+    <wire from="(250,230)" to="(250,260)"/>
+    <wire from="(250,230)" to="(270,230)"/>
+    <wire from="(250,260)" to="(250,310)"/>
+    <wire from="(250,260)" to="(270,260)"/>
+    <wire from="(250,310)" to="(250,320)"/>
+    <wire from="(250,310)" to="(270,310)"/>
+    <wire from="(250,320)" to="(250,330)"/>
+    <wire from="(250,320)" to="(270,320)"/>
+    <wire from="(250,330)" to="(250,340)"/>
+    <wire from="(250,330)" to="(270,330)"/>
+    <wire from="(250,340)" to="(270,340)"/>
     <wire from="(260,270)" to="(260,280)"/>
     <wire from="(260,270)" to="(270,270)"/>
     <wire from="(260,280)" to="(260,290)"/>
