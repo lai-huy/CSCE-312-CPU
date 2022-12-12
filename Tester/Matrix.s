@@ -19,15 +19,13 @@ main:
 	movl	$1, -28(%rbp)
 	movl	$2, -24(%rbp)
 	movl	$2, -20(%rbp)
-	leaq	-32(%rbp), %rdx
 	leaq	-32(%rbp), %rax
-	movq	%rdx, %rsi
 	movq	%rax, %rdi
 	movl	$0, %eax
 	call	matrixmult
 	movl	$0, %eax
-	movq	-8(%rbp), %rcx
-	xorq	%fs:40, %rcx
+	movq	-8(%rbp), %rdx
+	xorq	%fs:40, %rdx
 	je	.L3
 	call	__stack_chk_fail@PLT
 .L3:
@@ -50,19 +48,18 @@ matrixmult:
 	.cfi_def_cfa_register 6
 	subq	$48, %rsp
 	movq	%rdi, -40(%rbp)
-	movq	%rsi, -48(%rbp)
 	movq	%fs:40, %rax
 	movq	%rax, -8(%rbp)
 	xorl	%eax, %eax
 	movq	-40(%rbp), %rax
 	movl	(%rax), %edx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	movl	(%rax), %eax
 	imull	%eax, %edx
 	movq	-40(%rbp), %rax
 	addq	$4, %rax
 	movl	(%rax), %ecx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	addq	$8, %rax
 	movl	(%rax), %eax
 	imull	%ecx, %eax
@@ -70,14 +67,14 @@ matrixmult:
 	movl	%eax, -32(%rbp)
 	movq	-40(%rbp), %rax
 	movl	(%rax), %edx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	addq	$4, %rax
 	movl	(%rax), %eax
 	imull	%eax, %edx
 	movq	-40(%rbp), %rax
 	addq	$8, %rax
 	movl	(%rax), %ecx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	addq	$12, %rax
 	movl	(%rax), %eax
 	imull	%ecx, %eax
@@ -86,13 +83,13 @@ matrixmult:
 	movq	-40(%rbp), %rax
 	addq	$8, %rax
 	movl	(%rax), %edx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	movl	(%rax), %eax
 	imull	%eax, %edx
 	movq	-40(%rbp), %rax
 	addq	$12, %rax
 	movl	(%rax), %ecx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	addq	$8, %rax
 	movl	(%rax), %eax
 	imull	%ecx, %eax
@@ -101,14 +98,14 @@ matrixmult:
 	movq	-40(%rbp), %rax
 	addq	$8, %rax
 	movl	(%rax), %edx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	addq	$4, %rax
 	movl	(%rax), %eax
 	imull	%eax, %edx
 	movq	-40(%rbp), %rax
 	addq	$12, %rax
 	movl	(%rax), %ecx
-	movq	-48(%rbp), %rax
+	movq	-40(%rbp), %rax
 	addq	$12, %rax
 	movl	(%rax), %eax
 	imull	%ecx, %eax
