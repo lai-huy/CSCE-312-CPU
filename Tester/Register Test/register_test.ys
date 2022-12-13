@@ -1,0 +1,7 @@
+main:
+    irmovq $0x0123456789abcdef, %rbx
+    irmovq $0x10, %rcx
+    rmmovq %rbx, 0x10(%rcx)
+    irmovq $0xffffffffffffffff, %rdx
+    mrmovq 0x10(%rcx), %rdx
+    halt

@@ -1,0 +1,7 @@
+0x000:                      | main:
+0x000: 30f3efcdab8967452301 |     irmovq $0x0123456789abcdef, %rbx
+0x00a: 30f11000000000000000 |     irmovq $0x10, %rcx
+0x014: 40311000000000000000 |     rmmovq %rbx, 0x10(%rcx)
+0x01e: 30f2ffffffffffffffff |     irmovq $0xffffffffffffffff, %rdx
+0x028: 50211000000000000000 |     mrmovq 0x10(%rcx), %rdx
+0x032: 00                   |     halt
