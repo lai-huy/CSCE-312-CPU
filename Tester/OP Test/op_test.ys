@@ -1,0 +1,12 @@
+.pos 0
+main:
+    irmovq $0x1, %rcx
+    irmovq $0x2, %rdx
+    irmovq $0x3, %rbx
+    irmovq $0x4, %r8
+    addq %rcx, %rdx
+    subq %rbx, %r8
+    andq %r8, %rcx
+    xorq %rdx, %rbx
+    halt
+    

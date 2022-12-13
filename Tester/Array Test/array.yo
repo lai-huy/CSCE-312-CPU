@@ -3,8 +3,8 @@
 0x000: 30f50001000000000000 |     irmovq stack, %rbp
 0x00a: 30f40001000000000000 |     irmovq stack, %rsp
 0x014: 703000000000000000   |     jmp run
-                            | 
 0x020:                      |     .align 4
+                            | 
 0x020:                      | array:
 0x020: 0d000000             |     .long 0xd
 0x024: c0000000             |     .long 0xc0    
@@ -21,6 +21,6 @@
 0x05e: 50120400000000000000 |     mrmovq 4(%rdx), %rcx        
 0x068: b05f                 |     popq %rbp 
 0x06a: 00                   |     halt
-                            | 
+                            |  
 0x100:                      | .pos 0x100
 0x100:                      | stack:

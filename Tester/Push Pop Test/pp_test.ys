@@ -1,0 +1,8 @@
+irmovq $0x80, %rsp
+main:
+    irmovq $0x1, %rbx
+    pushq %rbx
+    irmovq $0xfedcba9876543210, %rbx
+    popq %rbx
+    halt
+    

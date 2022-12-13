@@ -516,11 +516,9 @@
     <comp lib="4" loc="(490,80)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 8
-30 f1 fe dc ba 98 76 54
-32 10 30 f2 1 23 45 67
-89 ab cd ef 30 f3 8*1 30
-f5 8*10 60 12 61 31 62 23
-63 52
+30 f4 80 7*0 30 f3 1 7*0
+a0 3f 30 f3 10 32 54 76
+98 ba dc fe b0 3f
 </a>
       <a name="labelvisible" val="true"/>
     </comp>
@@ -941,7 +939,7 @@ f5 8*10 60 12 61 31 62 23
       <a name="radix" val="16"/>
       <a name="width" val="64"/>
     </comp>
-    <comp lib="0" loc="(400,670)" name="Constant">
+    <comp lib="0" loc="(380,690)" name="Constant">
       <a name="value" val="0x6"/>
       <a name="width" val="4"/>
     </comp>
@@ -961,11 +959,19 @@ f5 8*10 60 12 61 31 62 23
       <a name="radix" val="16"/>
       <a name="width" val="64"/>
     </comp>
-    <comp lib="1" loc="(510,650)" name="OR Gate">
+    <comp lib="1" loc="(700,650)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="3" loc="(440,660)" name="Comparator">
+    <comp lib="3" loc="(440,680)" name="Comparator">
       <a name="width" val="4"/>
+    </comp>
+    <comp lib="4" loc="(470,650)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(550,650)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
     </comp>
     <comp loc="(610,530)" name="MEDecoder"/>
     <comp loc="(620,330)" name="srcA"/>
@@ -990,7 +996,11 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(330,390)" to="(330,490)"/>
     <wire from="(330,490)" to="(630,490)"/>
     <wire from="(350,350)" to="(350,510)"/>
+    <wire from="(350,510)" to="(350,720)"/>
     <wire from="(350,510)" to="(690,510)"/>
+    <wire from="(350,720)" to="(350,760)"/>
+    <wire from="(350,720)" to="(470,720)"/>
+    <wire from="(350,760)" to="(540,760)"/>
     <wire from="(360,310)" to="(360,420)"/>
     <wire from="(360,420)" to="(400,420)"/>
     <wire from="(370,270)" to="(370,350)"/>
@@ -1002,14 +1012,20 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(380,330)" to="(400,330)"/>
     <wire from="(380,400)" to="(380,530)"/>
     <wire from="(380,400)" to="(400,400)"/>
-    <wire from="(380,530)" to="(380,650)"/>
+    <wire from="(380,530)" to="(380,670)"/>
     <wire from="(380,530)" to="(390,530)"/>
-    <wire from="(380,650)" to="(400,650)"/>
-    <wire from="(440,660)" to="(480,660)"/>
+    <wire from="(380,670)" to="(400,670)"/>
+    <wire from="(380,690)" to="(400,690)"/>
+    <wire from="(440,680)" to="(470,680)"/>
     <wire from="(460,610)" to="(460,640)"/>
-    <wire from="(460,640)" to="(480,640)"/>
-    <wire from="(510,650)" to="(700,650)"/>
+    <wire from="(460,640)" to="(670,640)"/>
+    <wire from="(500,740)" to="(500,770)"/>
+    <wire from="(500,770)" to="(640,770)"/>
+    <wire from="(530,680)" to="(550,680)"/>
+    <wire from="(540,720)" to="(540,760)"/>
+    <wire from="(540,720)" to="(550,720)"/>
     <wire from="(610,530)" to="(680,530)"/>
+    <wire from="(610,680)" to="(640,680)"/>
     <wire from="(620,330)" to="(710,330)"/>
     <wire from="(620,350)" to="(620,400)"/>
     <wire from="(620,350)" to="(710,350)"/>
@@ -1017,6 +1033,9 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(630,230)" to="(710,230)"/>
     <wire from="(640,250)" to="(640,500)"/>
     <wire from="(640,250)" to="(710,250)"/>
+    <wire from="(640,660)" to="(640,680)"/>
+    <wire from="(640,660)" to="(670,660)"/>
+    <wire from="(640,680)" to="(640,770)"/>
     <wire from="(650,270)" to="(650,570)"/>
     <wire from="(650,270)" to="(710,270)"/>
     <wire from="(660,290)" to="(660,580)"/>
@@ -3799,7 +3818,7 @@ f5 8*10 60 12 61 31 62 23
       <a name="radix" val="16"/>
       <a name="width" val="64"/>
     </comp>
-    <comp lib="0" loc="(200,300)" name="Pin">
+    <comp lib="0" loc="(200,290)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
       <a name="radix" val="16"/>
@@ -4076,7 +4095,9 @@ f5 8*10 60 12 61 31 62 23
     <comp lib="1" loc="(650,590)" name="AND Gate"/>
     <comp lib="1" loc="(650,790)" name="OR Gate"/>
     <comp lib="1" loc="(730,560)" name="Controlled Buffer"/>
-    <comp lib="1" loc="(750,710)" name="Controlled Buffer"/>
+    <comp lib="1" loc="(750,710)" name="Controlled Buffer">
+      <a name="control" val="left"/>
+    </comp>
     <comp lib="2" loc="(700,270)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="width" val="64"/>
@@ -4091,10 +4112,10 @@ f5 8*10 60 12 61 31 62 23
       <a name="width" val="64"/>
     </comp>
     <wire from="(200,160)" to="(260,160)"/>
-    <wire from="(200,300)" to="(210,300)"/>
+    <wire from="(200,290)" to="(210,290)"/>
     <wire from="(200,420)" to="(230,420)"/>
-    <wire from="(210,300)" to="(210,780)"/>
-    <wire from="(210,300)" to="(440,300)"/>
+    <wire from="(210,290)" to="(210,780)"/>
+    <wire from="(210,290)" to="(440,290)"/>
     <wire from="(210,780)" to="(320,780)"/>
     <wire from="(230,420)" to="(230,630)"/>
     <wire from="(230,420)" to="(680,420)"/>
@@ -4120,9 +4141,9 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(390,570)" to="(430,570)"/>
     <wire from="(410,120)" to="(410,160)"/>
     <wire from="(410,120)" to="(480,120)"/>
-    <wire from="(410,160)" to="(410,180)"/>
-    <wire from="(410,180)" to="(410,250)"/>
-    <wire from="(410,180)" to="(480,180)"/>
+    <wire from="(410,160)" to="(410,200)"/>
+    <wire from="(410,200)" to="(410,250)"/>
+    <wire from="(410,200)" to="(480,200)"/>
     <wire from="(410,250)" to="(410,320)"/>
     <wire from="(410,250)" to="(470,250)"/>
     <wire from="(410,320)" to="(450,320)"/>
@@ -4141,13 +4162,12 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(420,750)" to="(530,750)"/>
     <wire from="(430,570)" to="(430,810)"/>
     <wire from="(430,810)" to="(530,810)"/>
-    <wire from="(440,140)" to="(440,200)"/>
+    <wire from="(440,140)" to="(440,180)"/>
     <wire from="(440,140)" to="(480,140)"/>
-    <wire from="(440,200)" to="(440,290)"/>
-    <wire from="(440,200)" to="(480,200)"/>
-    <wire from="(440,290)" to="(440,300)"/>
+    <wire from="(440,180)" to="(440,290)"/>
+    <wire from="(440,180)" to="(480,180)"/>
+    <wire from="(440,290)" to="(440,360)"/>
     <wire from="(440,290)" to="(470,290)"/>
-    <wire from="(440,300)" to="(440,360)"/>
     <wire from="(440,360)" to="(450,360)"/>
     <wire from="(440,570)" to="(440,600)"/>
     <wire from="(440,570)" to="(600,570)"/>
@@ -4190,9 +4210,7 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(590,770)" to="(600,770)"/>
     <wire from="(610,280)" to="(610,340)"/>
     <wire from="(610,280)" to="(660,280)"/>
-    <wire from="(620,660)" to="(630,660)"/>
-    <wire from="(630,660)" to="(630,760)"/>
-    <wire from="(630,760)" to="(740,760)"/>
+    <wire from="(620,660)" to="(740,660)"/>
     <wire from="(650,510)" to="(660,510)"/>
     <wire from="(650,590)" to="(720,590)"/>
     <wire from="(650,790)" to="(670,790)"/>
@@ -4207,7 +4225,7 @@ f5 8*10 60 12 61 31 62 23
     <wire from="(740,250)" to="(740,430)"/>
     <wire from="(740,250)" to="(860,250)"/>
     <wire from="(740,460)" to="(790,460)"/>
-    <wire from="(740,720)" to="(740,760)"/>
+    <wire from="(740,660)" to="(740,700)"/>
     <wire from="(750,710)" to="(820,710)"/>
     <wire from="(760,210)" to="(760,270)"/>
     <wire from="(760,270)" to="(760,300)"/>

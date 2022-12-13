@@ -1,0 +1,11 @@
+irmovq $0x80, %rsp
+main:
+    call cheese
+    irmovq $0x1, %rbx
+    halt
+
+cheese:
+    jmp burger
+
+burger:
+    ret

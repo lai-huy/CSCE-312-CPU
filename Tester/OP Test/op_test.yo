@@ -1,0 +1,11 @@
+0x000:                      | .pos 0
+0x000:                      | main:
+0x000: 30f10100000000000000 |     irmovq $0x1, %rcx
+0x00a: 30f20200000000000000 |     irmovq $0x2, %rdx
+0x014: 30f30300000000000000 |     irmovq $0x3, %rbx
+0x01e: 30f80400000000000000 |     irmovq $0x4, %r8
+0x028: 6012                 |     addq %rcx, %rdx
+0x02a: 6138                 |     subq %rbx, %r8
+0x02c: 6281                 |     andq %r8, %rcx
+0x02e: 6323                 |     xorq %rdx, %rbx
+0x030: 00                   |     halt

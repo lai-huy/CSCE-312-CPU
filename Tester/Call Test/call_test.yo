@@ -1,0 +1,11 @@
+0x000: 30f48000000000000000 | irmovq $0x80, %rsp
+0x00a:                      | main:
+0x00a: 801e00000000000000   |     call cheese
+0x013: 30f30100000000000000 |     irmovq $0x1, %rbx
+0x01d: 00                   |     halt
+                            | 
+0x01e:                      | cheese:
+0x01e: 702700000000000000   |     jmp burger
+                            | 
+0x027:                      | burger:
+0x027: 90                   |     ret

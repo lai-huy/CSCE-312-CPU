@@ -1,0 +1,26 @@
+.pos 0
+init: 
+    irmovq stack, %rbp
+    irmovq stack, %rsp
+    jmp run
+    .align 4
+
+array:
+    .long 0xd
+    .long 0xc0    
+    .long 0xb00
+    .long 0xa000
+run:
+    rrmovq %rbx, %rbp
+    irmovq $7, %rax
+    rmmovq %rax, 4(%rbx)
+    irmovq array, %rdx
+    pushq %rdx
+    addq %rbx, %rax
+    rmmovq %rax ,4(%rdx)   
+    mrmovq 4(%rdx), %rcx        
+    popq %rbp 
+    halt
+ 
+.pos 0x100
+stack:
