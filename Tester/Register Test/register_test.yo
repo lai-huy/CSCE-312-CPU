@@ -4,4 +4,5 @@
 0x014: 40311000000000000000 |     rmmovq %rbx, 0x10(%rcx)
 0x01e: 30f2ffffffffffffffff |     irmovq $0xffffffffffffffff, %rdx
 0x028: 50211000000000000000 |     mrmovq 0x10(%rcx), %rdx
-0x032: 00                   |     halt
+0x032: 2010                 |     rrmovq %rcx, %rax
+0x034: 00                   |     halt
